@@ -154,6 +154,8 @@ figure {
 }figcaption {
     text-align: center;
     font-weight: bold;
+}.figcaption-left {
+    text-align: left;
 }
 
 .p_main_js {
