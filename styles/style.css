@@ -1,0 +1,189 @@
+:root {
+    --h1_font_size: 60px;
+    /*變數*/
+    /*至少>35*/
+}
+
+/*
+margin/padding 語法：
+--------------------
+auto (通常可以視為"平均")
+px (pixel像素)
+em (大小比例)
+--------------------
+1.四周
+    margin: "四周";
+例如
+    margin: 1px;
+--------------------
+2.上下|左右
+    margin: "上下" "左右";
+例如
+    margin: 5% auto;
+--------------------
+3.上|左右|下
+    margin: "上" "左右" "下";
+例如
+    margin: 1em auto 2em;
+--------------------
+4.上|右|下|左
+    margin: "上" "右" "下" "左";
+例如
+    margin: 0 20px 20px 20px;
+--------------------
+*/
+
+html {
+    background-color: #00539F;
+    /*background-image: url("images/opengraph-logo.png");*/
+    
+    font-size: 20px;
+    /*字體大小*/
+    /* px means 'pixels': the base font size is now 10 pixels high  */
+    font-family: 'Noto Serif TC', serif;
+    /*字型*/
+}
+
+body {
+    width: 1200px;
+    background-color: #FF9500;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+}
+
+header {
+    width: 1200px;
+    background-color: crimson;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+}
+
+nav {
+    width: 1200px;
+    background-color: yellow;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+}
+
+main {
+    width: 1200px;
+    height: auto;
+    background-color: lightpink;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
+
+aside {
+    width: 300px;
+    height: 5000px;
+    background-color: yellowgreen;
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+}#left-aside {
+    margin-right: 5px;
+}#right-aside {
+    margin-left: 5px;
+}
+
+footer {
+    width: 1200px;
+    background-color: purple;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: var(--h1_font_size);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+    margin: 0;
+    padding: 20px 0;
+    color: #00539F;
+    text-shadow: 3px 3px 1px black;
+}h2 {
+    font-size: calc(var(--h1_font_size) - 10px);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+}h3 {
+    font-size: calc(var(--h1_font_size) - 20px);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+}h4 {
+    font-size: calc(var(--h1_font_size) - 25px);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+}h5 {
+    font-size: calc(var(--h1_font_size) - 30px);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+}h6 {
+    font-size: calc(var(--h1_font_size) - 35px);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+}
+
+/*
+ol, ul {
+    margin: 0;
+    padding: 0;
+}
+*/
+
+p,
+li {
+    font-size: 20px;
+    /*字體大小*/
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+figure {
+    box-align: center;
+}figcaption {
+    text-align: center;
+    font-weight: bold;
+}
+
+.p_main_js {
+    color: deepskyblue;
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}.img-width-500px {
+    width: 500px;
+}
+
+video {
+    width: 400px;
+    border: 10px inset gray;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: blue;
+    /*超連結文字顏色*/
+}
+
+a:hover {
+    /*當滑鼠或焦點(鍵盤操作時)停留於超連結上方，變換css*/
+    color: darkblue;
+    /*超連結文字顏色*/
+    font-weight: bold;
+    /*超連結文字粗體*/
+}

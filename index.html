@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--元素：文件類型，屬性：html。-->
+
+<!--註解文字。-->
+
+<html lang="zh-TW">
+<!--元素：html；又被視為根元素（root element），包含了所有顯示在這個頁面上的內容。-->
+<!--lang 語言設定為 中文-臺灣-->
+
+    <!--元素：head；涵括的重要資訊，但不會顯示於網頁瀏覽者眼前。-->
+    <head>
+
+        <meta charset="utf-8">
+        <!--元素：meta，屬性：charset(字元編碼)；指定了此文件使用utf-8這種字元編碼。-->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+        <!--定義字體集-->
+
+        <meta name="author" content="Zenon Chiu">
+        <!--作者-->
+        <meta name="description" content="ws001zc，test_site_2，form 2021/08/01 to 2021/08/13(latest version)；自架網頁、web自學。">
+        <!--描述-->
+
+        <title>ws001zc/test_site_2</title>
+        <!--元素：title；網頁標題。-->
+        <link rel="shortcut icon" href="shortcut.ico" type="image/x-icon">
+        <!--頁面縮圖(會顯示在書籤和title左邊)-->
+
+        <!--當其他網站聯結到我的網站時，其他網站就會顯示以下內容-->
+        <meta property="og:image" content="https://ws001zc.neocities.org/images/opengraph-logo.png">
+        <meta property="og:description"
+            content="Zenon Chiu is learning about web coding. (test_site_2 at ws001zc.neocities.org)">
+        <meta property="og:title" content="Zenon Chiu's test_site_2">
+        <meta name="twitter:title" content="Mozilla Developer Network">
+
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+        <!--定義CSS及位置-->
+        <script src="scripts/main.js" defer></script>
+        <!--defer可以指示瀏覽器，在頁面完成解析HTML後，再加載JavaScript，以確保在JavaScript運行之前加載所有HTML；避免因為JavaScript嘗試訪問頁面上尚不存在的HTML元素而導致錯誤-->
+
+    </head>
+
+    <!--元素：body；所有會顯示於網頁瀏覽者眼前的內容。-->
+    <body>
+
+        <!--制定CSS-->
+        <style type="text/css">
+        #left-aside {
+            float: left;
+        }
+        #right-aside {
+            float: right;
+        }
+        </style>
+
+        <!-- <div>、<span>
+            div(塊級元素)和span(內聯元素)皆為無語義元素，建議配合class/id屬性與CSS製造效果。
+            無語義元素是在找不到適合的元素時使用，應避免濫用。
+        -->
+
+        <!-- 本站所有网页的统一主标题 -->
+        <header>
+            <h1>ws001zc / test_site_2</h1>
+
+            <!-- 本站统一的导航栏 -->
+            <nav>
+                <ul>
+                    <li><a href="#">項目1</a></li>
+                    <li><a href="#">項目2</a></li>
+                    <li><a href="#">項目3</a></li>
+                    <!-- 共n个导航栏项目，省略…… -->
+                </ul>
+
+                <form>
+                    <!-- 搜索栏是站点内导航的一个非线性的方式。 -->
+                    <input type="search" name="q" placeholder="輸入搜尋">
+                    <!--輸入框-->
+                    <input type="submit" value="搜尋">
+                    <!--按鈕-->
+                </form>
+            </nav>
+        </header>
+
+        <!--左側欄-->
+        <aside id="left-aside">
+            <h2>左超連結欄位</h2>
+            <ul>
+                <li><a href="#">超連結1</a></li>
+                <li><a href="#">超連結2</a></li>
+                <li><a href="#">超連結3</a></li>
+                <!-- 侧边栏有n个超链接，略略略…… -->
+            </ul>
+        </aside>
+
+        <!--右側欄-->
+        <aside id="right-aside">
+            <h2>右超連結欄位</h2>
+            <ul>
+                <li><a href="#">超連結1</a></li>
+                <li><a href="#">超連結2</a></li>
+                <li><a href="#">超連結3</a></li>
+                <!-- 侧边栏有n个超链接，略略略…… -->
+            </ul>
+        </aside>
+
+        <!-- 网页主体内容 -->
+        <main>
+
+            <article>
+                article 0.23153fjzsh hklh fkfhkjdfhszkfjkfhf ukzhf kfhzkscz kjzckd dfkjfkwf kszcjkdshf;kzifjewjfwei ojzl/
+                ejf elfj ffahefkuefhgruflshofisdhfhdgjhlfklhis vdfkjfkefeijfosghy564j4y86jt3 45th13t54hg146eth35h th1
+                g3rg46gr35h t864r65g3hr53htg rg5h5h grim-northgrg5r4g5rg48rg43g5r5gr68g4grg5g53g4r6g3rg336water9
+                e6rf52we34e fe6s4f8654f3s54 z4 fzg46s36sr grim-northgrg5r4g5rg48rg43g5 si ofjijfi feafjeief
+                jiefjlaefije;zjiefelfijafljfilefjialfjiLFjkafhoaefijkldjefis end
+                <!-- 此处包含一个 article（一篇文章），内容略…… -->
+            </article>
+
+            <!--creating a navigation menu創建導航菜單-->
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu"
+                target="_blank" title="creating a navigation menu">
+                創建導航菜單
+            </a>
+
+            <!--文件標題(heading)，至多六層。-->
+            <h1>第一層標題</h1>
+            <h2 id="H2">第二層標題</h2>
+            <h3>第三層標題</h3>
+            <h4>第四層標題</h4>
+            <h5>第五層標題</h5>
+            <h6>第六層標題</h6>
+
+            <img src="images/white.png" title="color white" alt="My test image: color change" class="img-width-500px">
+            <!--元素：img，屬性：src(圖片來源位置)、alt(圖片說明)。-->
+            <figure>
+                <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+                    title="dinosaur"
+                    alt="test"
+                >
+                <figcaption>曼彻斯特大學博物館展出的暴龍的化石</figcaption>
+            </figure>
+
+            <!--內文格式-->
+            <div>
+
+                <!--段落-->
+                <div>
+
+                    <p>段落內文：</p>
+                    <p><span lang="en-US">paragraph</span></p>
+                    <p><span lang="ja">ご飯が熱い。</span></p>
+                    <p><em>斜體</em></p>
+                    <p><strong>粗體</strong></p>
+
+                </div>
+
+                <!--縮寫-->
+                <div>
+
+                    <p>縮寫展示：</p>
+                    <p><abbr title="Hypertext Markup Language">HTML</abbr></p>
+                    <p><abbr title="JavaScript">JS</abbr></p>
+
+                </div>
+
+                <!--上標sup、下標sub (次方/基數...)-->
+                <div>
+
+                    <p>上下標：</p>
+                    <p>(2021) Monday, August 16<sup>th</sup></p>
+                    <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></p>
+
+                </div>
+
+                <br>
+            </div>
+
+            <!--清單-->
+            <div>
+
+                <!--無順序性清單（Unordered lists）。-->
+                <ul>
+                    <li>無序清單1</li>
+                    <li>無序清單2</li>
+                    <ol>
+                        <li>無序中有序1</li>
+                        <li>無序中有序2</li>
+                    </ol>
+                    <li>無序清單3</li>
+
+                    <li>無序極限1</li>
+                    <ul>
+                        <li>無序極限2</li>
+                        <ul>
+                            <li>無序極限3</li>
+                        </ul>
+                    </ul>
+                </ul>
+
+                <!--有順序性清單（Ordered lists）。-->
+                <ol>
+                    <li>有序清單1</li>
+                    <li>有序清單2</li>
+                    <ul>
+                        <li>有序中無序1</li>
+                        <li>有序中無序2</li>
+                    </ul>
+                    <li>有序清單3</li>
+                </ol>
+
+                <!--描述清單(description lists)-->
+                <dl>
+                    <dt>描述清單1</dt>
+                    <dd>解釋1</dd>
+
+                    <dt>描述清單2</dt>
+                    <dd>解釋1</dd>
+                    <dd>解釋2</dd>
+                </dl>
+            </div>
+
+            <!--超連結-->
+            <div>
+                <!--同一網站盡量用"相對url"(降低瀏覽器及網路負載)，其他網站則用"絕對url""-->
+
+                <a href="https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web" target="_blank"
+                    title="developer.mozilla.org">
+                    超連結
+                </a>
+                <!--元素：a(anchor)，屬性：href(hypertext reference)；連結至其他位置。-->
+                <!--target="_blank"可以在新視窗中開啟超連結，若不要則可忽略-->
+                <br>
+
+                <a href="#H2">
+                    <!--跳轉至本頁面的H2-->
+                    to h2
+                </a>
+                <br>
+
+                <a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+                    download="firefox-latest-64bit-installer.exe">
+                    <!--屬性download可預設存檔檔名-->
+                    Download Latest Firefox for Windows (64-bit) (English, US)
+                </a>
+                <br>
+
+                <a href="mailto:example@gmil.com">
+                    mail not found (it's fake)
+                </a>
+
+            </div>
+
+            <!--引用：blockquote、q-->
+            <div>
+
+                <!--模塊引用-->
+                <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+                    <p>
+                        The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block Quotation
+                            Element</em>) indicates that the enclosed text is an extended quotation.
+                    </p>
+                </blockquote>
+
+                <!--行內引用-->
+                <p>
+                    The quote element — <code>&lt;q&gt;</code> — is
+                    <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+                        intended for short quotations that don't require paragraph breaks.
+                    </q>
+                </p>
+
+                <p>According to the
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote" target="_blank">
+                        <cite>MDN blockquote page</cite>
+                    </a>:
+                </p>
+            </div>
+
+            <!--聯絡地址-->
+            <address>
+
+                <p>
+                    Zenon<br>
+                    1111111<br>
+                    222222222<br>
+                    TW
+                </p>
+
+                <ul>
+                    <li>Tel: 01234 567 890</li>
+                    <li>
+                        Email:
+                        <a href="mailto:me@grim-north.co.uk">
+                            me@grim-north.co.uk
+                        </a>
+                    </li>
+                </ul>
+            </address>
+
+            <!--顯示計算機代碼-->
+            <div>
+
+                <pre><code>
+                    const para = document.querySelector('p');
+            
+                    para.onclick = function() {
+                        alert('Uhhh... don't click me!');
+                    }
+                </code></pre>
+
+                <p>
+                    不要使用 <code>&lt;font&gt;</code> 、 <code>&lt;center&gt;</code> 等表象元素。
+                    <br> 在上述的 JS 示範中，<var>para</var> 表示一個段落元素。
+                    <br> 按 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd> 全選。
+                </p>
+
+                <pre> <!--可包含 >1格的空白 的p元素-->
+                    $ <kbd>ping mozilla.org</kbd>
+                    <samp>PING mozilla.org (63.245.215.20): 56 data bytes
+                    64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp>
+                </pre>
+            </div>
+
+            <!--時間-->
+            <time datetime="2016-01-20">2016年1月20日</time>
+            <!--其他格式
+
+                年+月+日       (YYYY-MM-DD)
+                <time datetime="2016-01-20">20 January 2016</time>
+
+                年+月          (YYYY-MM)
+                <time datetime="2016-01">January 2016</time>
+                
+                月+日          (MM-DD)
+                <time datetime="01-20">20 January</time>
+                    
+                時+分          (hh:mm)
+                <time datetime="19:30">19:30</time>
+                
+                時+分+秒+毫秒   (hh:mm:ss.ms)
+                <time datetime="19:30:01.856">19:30:01.856</time>
+                    
+                日期+時間       (YYYY-MM-DDThh:mm)
+                <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+                    
+                含時區偏移值    (YYYY-MM-DDThh:mm+hh:mm)
+                <time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+                    
+                年+周          (YYYY-Www)
+                <time datetime="2016-W04">The fourth week of 2016</time>
+            -->
+
+            <p><br>以下影音<br></p>
+
+            <!--影片檔-->
+            <video controls poster="images/video.png">
+                <!--可選取多個資源，type可協助瀏覽器直接開啟支援的資源，否則瀏覽器將一個一個載入測試，耗時-->
+                <source src="videos/rabbit.mp4" type="video/mp4">
+                <source src="videos/rabbit.webm" type="video/webm">
+                <p>你的瀏覽器不支援 HTML5 影片。可進入<a href="rabbit320.mp4">此連結</a>欣賞</p>
+            </video>
+
+            <!--音訊檔-->
+            <figure>
+                <figcaption>以下音樂來自madly應用程式的範例<br><br></figcaption>
+
+                <figcaption>賓士</figcaption>
+                <audio controls>
+                    <source src="audios/賓士.wav" type="audio/wav">
+                    <source src="audios/賓士.mp3" type="audio/mp3">
+
+                    <p>你的瀏覽器不支援 HTML5 音訊。可進入<a href="https://drgks-369.github.io/audios/%E8%B3%93%E5%A3%AB.wav">此連結</a>聆聽</p>
+                </audio>
+    
+                <figcaption>落日</figcaption>
+                <audio controls>
+                    <source src="audios/賓士.wav" type="audio/wav">
+                    <source src="audios/賓士.mp3" type="audio/mp3">
+                    
+                    <p>你的瀏覽器不支援 HTML5 音訊。可進入<a href="https://drgks-369.github.io/audios/%E8%90%BD%E6%97%A5.wav">此連結</a>聆聽</p>
+                </audio>
+    
+                <figcaption>決心</figcaption>
+                <audio controls>
+                    <source src="audios/賓士.wav" type="audio/wav">
+                    <source src="audios/賓士.mp3" type="audio/mp3">
+                    
+                    <p>你的瀏覽器不支援 HTML5 音訊。可進入<a href="https://drgks-369.github.io/audios/%E6%B1%BA%E5%BF%83.wav">此連結</a>聆聽</p>
+                </audio>
+            </figure>
+
+            <p class="p_main_js">以下為JavaScript內容，img也是js的一部分</p>
+
+            <!--特殊字元
+
+                    在HTML中，字元 <, >,",' 和 & 是特殊字元. 它們是HTML語法本身的一部分；若需要純文字，使用字元引用以忽略。
+                    
+                    <：&lt;
+                    >：&gt;
+                    "：&quot;
+                    '：&apos;
+                    &：&amp;
+                -->
+
+            <button>Change user</button>
+
+        </main>
+
+        <!-- 本站所有网页的统一页脚 -->
+        <footer>
+            <p>© 2021 Zenon Chiu 測試網頁</p>
+        </footer>
+
+    </body>
+
+</html>
