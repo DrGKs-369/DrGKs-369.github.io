@@ -402,6 +402,71 @@
                 <circle cx="150" cy="100" r="90" fill="blue" />
             </svg>
 
+            <!--表格-->
+            <!-- td代表table data；tr代表table row；th代表table head-->
+            <!--colspan代表合併同列儲存格；rowspan代表合併同排儲存格-->
+            <p>表格</p>
+            <table>
+                <caption>xy二維陣列</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="border: 5px solid;">
+                </colgroup>
+                
+                <thead>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <th scope="colgroup" colspan="4">x</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">1</th>
+                        <th scope="col">2</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+                    </tr>                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="rowgroup" rowspan="4">y</th>
+                        <th scope="row">1</th>
+                        <td>1,1</td>
+                        <td>2,1</td>
+                        <td>3,1</td>
+                        <td>4,1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>1,2</td>
+                        <td>2,2</td>
+                        <td>&nbsp;</td>
+                        <td>4,2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">3~4</th>
+                        <td>1,3</td>
+                        <td colspan="2">2~3,3</td>
+                        <td>4,3</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">1~3,4</td>
+                        <td>4,4</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td>&nbsp;</td>
+                    <td colspan="4">great</th>
+                    <td>yabai</td>
+                </tfoot>
+                
+            </table>
+
             <p class="p_main_js">以下button為JavaScript內容；img也是js的一部分</p>
 
             <!--特殊字元
@@ -424,8 +489,8 @@
             <p class="center">
                 一杯咖啡省起來，<br>
                 支持在下萬感激；<br>
-                按鈕五下點起來，<br>
-                也可免費支持我。<br>
+                五下按鈕點起來，<br>
+                支持我也可免費。<br>
                 <a href="https://liker.land/zenon-chiu/civic">liker.land/zenon-chiu</a>
             </p>            
             <div class="likecoin-embed likecoin-button" data-liker-id="zenon-chiu" data-href="https://docs.like.co/developer/likecoin-button/"></div>
