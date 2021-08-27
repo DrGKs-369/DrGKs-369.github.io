@@ -44,16 +44,6 @@
     <!--元素：body；所有會顯示於網頁瀏覽者眼前的內容。-->
     <body>
 
-        <!--制定CSS-->
-        <style type="text/css">
-        #left-aside {
-            float: left;
-        }
-        #right-aside {
-            float: right;
-        }
-        </style>
-
         <!-- <div>、<span>
             div(塊級元素)和span(內聯元素)皆為無語義元素，建議配合class/id屬性與CSS製造效果。
             無語義元素是在找不到適合的元素時使用，應避免濫用。
@@ -61,7 +51,7 @@
 
         <!-- 本站所有网页的统一主标题 -->
         <header>
-            <img
+            <img src="images/head (1200-300px).png" alt="head"
                 srcset="
                     images/head (1200-300px).png 1200w,
                     images/head (900-225px).png 900w,
@@ -74,7 +64,8 @@
                     (max-width: 900px) 900px,
                     1200px
                     "
-                src="images/head (1200-300px).png" alt="head">
+                class="header-picture"
+            >
             <h1>ws001zc / test_site_2</h1>
 
             <!-- 本站统一的导航栏 -->
@@ -98,7 +89,7 @@
 
         <!--左側欄-->
         <aside id="left-aside">
-            <h2>左超連結欄位</h2>
+            <h2 class="aside-p">左超連結欄位</h2>
             <ul>
                 <li><a href="#">超連結1</a></li>
                 <li><a href="#">超連結2</a></li>
@@ -109,7 +100,7 @@
 
         <!--右側欄-->
         <aside id="right-aside">
-            <h2>右超連結欄位</h2>
+            <h2 class="aside-p">右超連結欄位</h2>
             <ul>
                 <li><a href="#">超連結1</a></li>
                 <li><a href="#">超連結2</a></li>
@@ -122,11 +113,7 @@
         <main>
 
             <article>
-                article 0.23153fjzsh hklh fkfhkjdfhszkfjkfhf ukzhf kfhzkscz kjzckd dfkjfkwf kszcjkdshf;kzifjewjfwei ojzl/
-                ejf elfj ffahefkuefhgruflshofisdhfhdgjhlfklhis vdfkjfkefeijfosghy564j4y86jt3 45th13t54hg146eth35h th1
-                g3rg46gr35h t864r65g3hr53htg rg5h5h grim-northgrg5r4g5rg48rg43g5r5gr68g4grg5g53g4r6g3rg336water9
-                e6rf52we34e fe6s4f8654f3s54 z4 fzg46s36sr grim-northgrg5r4g5rg48rg43g5 si ofjijfi feafjeief
-                jiefjlaefije;zjiefelfijafljfilefjialfjiLFjkafhoaefijkldjefis end
+                article egg apple banana june like love communication transportation usually geograghist ocheologist hololive nabi yabai yubi lol end.
                 <!-- 此处包含一个 article（一篇文章），内容略…… -->
             </article>
 
@@ -144,10 +131,11 @@
             <h5>第五層標題</h5>
             <h6>第六層標題</h6>
 
-            <img src="images/white.png" title="color white" alt="My test image: color change" class="img-width-500px">
+            <img src="images/white.png" title="color white" alt="My test image: color change" class="js-picture">
             <!--元素：img，屬性：src(圖片來源位置)、alt(圖片說明)。-->
             <figure>
                 <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+                    class="dinosaur"
                     title="dinosaur"
                     alt="test"
                 >
@@ -312,28 +300,8 @@
             </address>
 
             <!--顯示計算機代碼-->
-            <div>
-
-                <pre><code>
-                    const para = document.querySelector('p');
-            
-                    para.onclick = function() {
-                        alert('Uhhh... don't click me!');
-                    }
-                </code></pre>
-
-                <p>
-                    不要使用 <code>&lt;font&gt;</code> 、 <code>&lt;center&gt;</code> 等表象元素。
-                    <br> 在上述的 JS 示範中，<var>para</var> 表示一個段落元素。
-                    <br> 按 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd> 全選。
-                </p>
-
-                <pre> <!--可包含 >1格的空白 的p元素-->
-                    $ <kbd>ping mozilla.org</kbd>
-                    <samp>PING mozilla.org (63.245.215.20): 56 data bytes
-                    64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp>
-                </pre>
-            </div>
+            <iframe src="pres.html" frameborder="0" height="400px" allowfullscreen sandbox></iframe>
+            <br>
 
             <!--時間-->
             <time datetime="2016-01-20">2016年1月20日</time>

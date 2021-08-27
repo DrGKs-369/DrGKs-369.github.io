@@ -45,15 +45,17 @@ html {
 }
 
 body {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 600px;
     background-color: #FF9500;
     margin: 0 auto;
-    padding: 0 20px 20px 20px;
+    padding: 0;
     border: 5px solid black;
 }
 
 header {
-    width: 1200px;
+    width: 100%;
     background-color: crimson;
     margin: 0 auto;
     padding: 0;
@@ -61,7 +63,7 @@ header {
 }
 
 nav {
-    width: 1200px;
+    width: 100%;
     background-color: yellow;
     margin: 0 auto;
     padding: 0;
@@ -69,29 +71,31 @@ nav {
 }
 
 main {
-    width: 1200px;
+    width: 50%;
     height: auto;
     background-color: lightpink;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     border: 1px solid black;
 }
 
 aside {
-    width: 300px;
-    height: 5000px;
+    width: 24%;
+    height: 100%;
     background-color: yellowgreen;
     padding: 0;
     margin: 0;
-    border: 1px solid black;
+    border: 0.5px solid black;
 }#left-aside {
-    margin-right: 5px;
+    float: left;
 }#right-aside {
-    margin-left: 5px;
+    float: right;
+}.aside-p {
+    font-size: 30px;
 }
 
 footer {
-    width: 1200px;
+    width: 100%;
     background-color: purple;
     margin: 0 auto;
     padding: 0;
@@ -149,13 +153,22 @@ li {
     letter-spacing: 1px;
 }
 
+article {
+    width: 25%;
+}
+
 figure {
     box-align: center;
+    max-width: 100%;
 }figcaption {
     text-align: center;
     font-weight: bold;
 }.figcaption-left {
     text-align: left;
+}
+
+audio {
+    max-width: 100%;
 }
 
 .p_main_js {
@@ -166,15 +179,28 @@ figure {
 img {
     display: block;
     margin: 0 auto;
-}.img-width-500px {
-    width: 500px;
+}.header-picture {
+    width: 100%
+}.js-picture {
+    width: 100%;
+}.dinosaur {
+    max-width: 100%;
 }
 
 video {
-    width: 400px;
-    border: 10px inset gray;
+    width: 100%;
+    border: 0;
     margin: 0;
     padding: 0;
+}
+
+iframe {
+    width: 100%;
+    background-color: white;
+}
+
+svg {
+    max-width: 100%;
 }
 
 a {
