@@ -24,6 +24,8 @@
         <!--元素：title；網頁標題。-->
         <link rel="shortcut icon" href="shortcut.ico" type="image/x-icon">
         <!--頁面縮圖(會顯示在書籤和title左邊)-->
+        <meta name="viewport" content="width=device-width">
+        <!--強制以裝置營幕的真實寬度瀏覽網頁，對自變動CSS有幫助？-->
 
         <!--當其他網站聯結到我的網站時，其他網站就會顯示以下內容-->
         <meta property="og:image" content="https://ws001zc.neocities.org/images/opengraph-logo.png">
@@ -59,6 +61,20 @@
 
         <!-- 本站所有网页的统一主标题 -->
         <header>
+            <img
+                srcset="
+                    images/head (1200-300px).png 1200w,
+                    images/head (900-225px).png 900w,
+                    images/head (600-150px).png 600w,
+                    images/head (300-75px).png 300w
+                    "
+                sizes="
+                    (max-width: 300px) 300px,
+                    (max-width: 600px) 600px,
+                    (max-width: 900px) 900px,
+                    1200px
+                    "
+                src="images/head (1200-300px).png" alt="head">
             <h1>ws001zc / test_site_2</h1>
 
             <!-- 本站统一的导航栏 -->
