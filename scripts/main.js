@@ -1,18 +1,18 @@
-var myImage = document.querySelector('img'); //定義myImage為img元素
+var JsPicture = document.querySelector('.js-picture'); //定義myImage為img元素
 
-myImage.onclick = function () { //滑鼠點擊img元素時執行
+JsPicture.onclick = function () { //滑鼠點擊img元素時執行
 
-    let mySrc = myImage.getAttribute('src'); //定義mySrc為圖片位置
+    let mySrc = JsPicture.getAttribute('src'); //定義mySrc為圖片位置
 
     if (mySrc === 'images/white.png') { //假如是"white"，
-        myImage.setAttribute('src', 'images/gray.png'); //就變成"gray"；
-        myImage.setAttribute('title', 'color gray');
+        JsPicture.setAttribute('src', 'images/gray.png'); //就變成"gray"；
+        JsPicture.setAttribute('title', 'color gray');
     } else if (mySrc === 'images/gray.png') { //假如是"gray"，
-        myImage.setAttribute('src', 'images/black.png'); //就變成"black"；
-        myImage.setAttribute('title', 'color black');
+        JsPicture.setAttribute('src', 'images/black.png'); //就變成"black"；
+        JsPicture.setAttribute('title', 'color black');
     } else if (mySrc === 'images/black.png') { //假如是"black"，
-        myImage.setAttribute('src', 'images/white.png'); //就變成"white"。
-        myImage.setAttribute('title', 'color white');
+        JsPicture.setAttribute('src', 'images/white.png'); //就變成"white"。
+        JsPicture.setAttribute('title', 'color white');
     }
 }
 //--------------------------------------------------

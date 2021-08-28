@@ -4,8 +4,57 @@
     /*至少>35*/
 }
 
-/*
-margin/padding 語法：
+/*CSS selcter 語法
+以下可混用
+--------------------
+直接引入style2.css
+@import 'styles2.css';
+--------------------
+偵測(媒體查詢)
+@media (條件[[屬性]: [值]]) { if ture, 執行
+    [selcter] {
+        [屬性]: [值];
+    }
+}
+--------------------
+套用於一個元素集
+[元素] {
+    [屬性]: [值];
+}
+--------------------
+套用多個元素集
+[元素一],[元素二] {
+    [屬性]: [值];
+}
+--------------------
+套用父元素下子元素集
+[父元素] [子元素] {
+    [屬性]: [值];
+}
+--------------------
+套用一個標記(id="")
+#[id-name] {
+    [屬性]: [值];
+}
+--------------------
+套用多個標記(class="")
+.[class-name] {
+    [屬性]: [值];
+}
+--------------------
+套用相鄰兩個元素
+[前元素]+[後元素] {
+    [屬性]: [值];
+}
+--------------------
+*/
+
+/*函式
+calc(90%-30px)計算
+rotate(0.8turn)旋轉
+*/
+
+/* margin/padding 語法：
 --------------------
 auto (通常可以視為"平均")
 px (pixel像素)
@@ -31,6 +80,43 @@ em (大小比例)
 例如
     margin: 0 20px 20px 20px;
 --------------------
+*/
+
+/* li 符號樣式：
+語法：
+li {
+    list-style-type: [example];
+} 
+--------------------
+無序(ul)：
+disc; 黑色填滿圓形
+circle; 黑框空心圓形
+square; 黑色填滿方形
+
+有序(ol)：
+decimal; 阿拉伯數字
+decimal-leading-zero; 阿拉伯數字(前面加零)
+upper-alpha; 英文大寫字母
+lower-alpha; 英文小寫字母
+cjk-decimal; 中日韓文小寫數字
+trad-chinese-formal; 繁體中文大寫數字
+trad-chinese-informal; 繁體中文小寫數字
+simp-chinese-formal; 簡體中文大寫數字
+simp-chinese-informal; 簡體中文小寫數字
+japanese-formal; 日文漢字大寫數字
+japanese-informal; 日文漢字小寫數字
+hiragana; 日文平假名字母
+katakana; 日文片假名字母
+korean-hangul-formal; 韓文小寫數字
+korean-hanja-formal; 韓文漢字大寫數字
+korean-hanja-informal; 韓文漢字小寫數字
+upper-roman; 羅馬大寫數字
+lower-roman; 羅馬小寫數字
+upper-greek; 希臘文大寫字母
+lower-greek; 希臘文小寫字母
+upper-latin; 拉丁文大寫字母
+lower-latin; 拉丁文小寫字母
+hebrew; 希伯來文字母
 */
 
 html {
@@ -153,13 +239,6 @@ h6 {
     /*位置(置中)*/
 }
 
-/*
-ol, ul {
-    margin: 0;
-    padding: 0;
-}
-*/
-
 p,
 li {
     font-size: 20px;
@@ -240,10 +319,17 @@ a {
 
 a:hover {
     /*當滑鼠或焦點(鍵盤操作時)停留於超連結上方，變換css*/
-    color: darkblue;
+    color: lightblue;
     /*超連結文字顏色*/
     font-weight: bold;
     /*超連結文字粗體*/
+    text-decoration: none;
+    /*移除底線*/
+}
+
+a:visited {
+    /*已訪問*/
+    color: darkblue;
 }
 
 table {
