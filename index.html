@@ -70,10 +70,24 @@
 
             <!-- 本站统一的导航栏 -->
             <nav>
-                <ul>
-                    <li><a href="#">項目1</a></li>
-                    <li><a href="#">項目2</a></li>
-                    <li><a href="#">項目3</a></li>
+                <ul style="
+                    display: inline-flex;
+                    list-style: none;">
+                    <li><a href="#"
+                            style="
+                                border: 5px solid black;
+                                padding: 10px;
+                                background-color: orange;">項目1</a></li>
+                    <li><a href="#"
+                            style="
+                                border: 5px solid black;
+                                padding: 10px;
+                                background-color: orange;">項目2</a></li>
+                    <li><a href="#"
+                            style="
+                                border: 5px solid black;
+                                padding: 10px;
+                                background-color: orange;">項目3</a></li>
                     <!-- 共n个导航栏项目，省略…… -->
                 </ul>
 
@@ -112,11 +126,18 @@
         <!-- 网页主体内容 -->
         <main>
 
-            <article>
-                article egg apple banana june like love communication transportation usually geograghist ocheologist hololive nabi yabai yubi lol end.
-                <!-- 此处包含一个 article（一篇文章），内容略…… -->
-            </article>
-
+            <p>
+                I have something to show you, but it's hidden.<br>
+                please select article under this paragraph.<br>
+                From there,&gt;
+                <article class="hide">
+                    <s>Gura is my wife.</s>(wake up!)<br>
+                    she is so cute~~~~~
+                    <!-- 此处包含一个 article（一篇文章），内容略…… -->
+                </article><br>
+                &lt;To there.
+            </p>
+            
             <!--creating a navigation menu創建導航菜單-->
             <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu"
                 target="_blank" title="creating a navigation menu">
@@ -466,6 +487,40 @@
                 </tfoot>
                 
             </table>
+
+            <p>block / inline / flex / inline-flex / inline-block 之間的差別 (可以放大縮小看變化)</p>
+            <p class="border-vs">
+                /-<span class="border-vs block">
+                    block-1
+                    /-<span class="border-vs block">block-1-1</span>-/
+                    /-<span class="border-vs block">block-1-2</span>-/
+                </span>-/
+                /-<span class="border-vs block">block-2</span>-/
+                /-<span class="border-vs inline">
+                    inline-1
+                    /-<span class="border-vs inline">inline-1-1</span>-/
+                    /-<span class="border-vs inline">inline-1-2</span>-/
+                </span>-/
+                /-<span class="border-vs inline">inline-2</span>-/
+                /-<span class="border-vs flex">
+                    flex-1
+                    /-<span class="border-vs flex">flex-1-1</span>-/
+                    /-<span class="border-vs flex">flex-1-1</span>-/
+                </span>-/
+                /-<span class="border-vs flex">flex-2</span>-/
+                /-<span class="border-vs inline-flex">
+                    inline-flex-1
+                    /-<span class="border-vs inline-flex">inline-flex-1-1</span>-/
+                    /-<span class="border-vs inline-flex">inline-flex-1-2</span>-/
+                </span>-/
+                /-<span class="border-vs inline-flex">inline-flex-2</span>-/
+                /-<span class="border-vs inline-block">
+                    inline-block-1
+                    /-<span class="border-vs inline-block">inline-block-1-1</span>-/
+                    /-<span class="border-vs inline-block">inline-block-1-2</span>-/
+                </span>-/
+                /-<span class="border-vs inline-block">inline-block-2</span>-/
+            </p>
 
             <p class="p_main_js">以下button為JavaScript內容；img也是js的一部分</p>
 

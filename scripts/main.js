@@ -1,4 +1,4 @@
-var JsPicture = document.querySelector('.js-picture'); //定義myImage為img元素
+var JsPicture = document.querySelector('.js-picture'); //定義JsPicture為js-picture class
 
 JsPicture.onclick = function () { //滑鼠點擊img元素時執行
 
