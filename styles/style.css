@@ -281,7 +281,7 @@ body {
     background-color: #FF9500;
     background-image: url(../images/546902.jpg);
     background-size: 1200px;
-    background-position: top center;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -300,6 +300,23 @@ nav {
     margin: 0 auto;
     padding: 0;
     border: 1px solid black;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 1px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5em;
+    background-color: chartreuse;
+}
+
+nav ul li a {
+    text-decoration: none;
 }
 
 main {
@@ -321,14 +338,17 @@ aside {
 
 #left-aside {
     float: left;
+    border-bottom-left-radius: 10em 10%;
 }
 
 #right-aside {
     float: right;
+    border-bottom-right-radius: 10em 10%;
 }
 
 .aside-p {
     font-size: 30px;
+    border-bottom: 1em double rgb(114, 11, 231)
 }
 
 footer {
