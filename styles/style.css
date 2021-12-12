@@ -282,7 +282,8 @@ body {
     background-image: url(../images/546902.jpg);
     background-size: 1200px;
     background-position: top center;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
