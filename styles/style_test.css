@@ -1,0 +1,18 @@
+/*註解文字。*/
+
+/*規則集 (rule set)。*/
+p{ /*選擇器（Selector）：p，為HTML的元素。（選擇器類型有很多）*/
+  /*  選擇器類型有很多*/
+  color: red;/*宣告（Declaration）：color:red;，元素的呈現樣貌。*/
+  width/*屬性 (Properties)：width，選擇屬性來影響 rule set。*/: 500px/*屬性值 (Property value)：500px。*/;
+  border: 1px solid black;
+}
+
+.my-class{
+  color: darkgreen;
+  border: 5px solid orange;
+}
+
+a:hover{
+  color: gold;
+}
