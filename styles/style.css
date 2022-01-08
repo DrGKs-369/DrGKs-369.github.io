@@ -1,0 +1,578 @@
+:root {
+    --h1_font_size: 60px;
+    /*變數*/
+    /*至少>35*/
+}
+
+/*CSS selcter grammar (CSS選擇器語法)
+以下可混用*/
+/* 特殊/基礎
+--------------------
+直接引入CSS
+@import '路徑';
+--------------------
+偵測(媒體查詢)
+條件(屬性: 值)為真，才執行。
+@media (條件) {
+    selcter {}
+}
+--------------------
+通用選擇器/全局選擇器
+* {}
+--------------------
+元素選擇器/標籤選擇器
+元素 {}
+例如 p {} 選中<p>
+--------------------
+多個元素選擇器
+元素一,元素二 {}
+例如 p,img {} 選中<p>和<img>
+--------------------
+*/
+/* id/class
+--------------------
+id選擇器
+#id-name {}
+例如 #example {} 選中<元素 id="example">，只能有一個元素使用id
+--------------------
+特定元素的id選擇器
+p#id-name {}
+例如 p#example {} 選中<p id="example">，只有<p>可以使用id (含有id="example"的<p>被選中，含有id="example"的其他元素不被選中)
+--------------------
+class選擇器/類選擇器
+.class-name {}
+例如 .example {} 選中<元素 class="example">，可以有多個元素使用class (任何含有class="example"的被選中)
+--------------------
+特定元素的class選擇器
+p.class-name {}
+例如 p.example {} 選中<p class="example">，只有<p>可以使用class (含有class="example"的<p>被選中，含有class="example"的其他元素不被選中)
+--------------------
+特定class的class選擇器
+.class-name1.class-name2 {}
+例如 .example1.example2 {} 選中<元素 class="example1 example2">，只有class1可以使用class2 (含有class="example1"的class="example2"被選中，不含有class="example1"的class="example2"不被選中)
+--------------------
+*/
+/* 偽類/偽元素 選擇器
+--------------------
+偽類選擇器
+元素:偽類 {}
+例如 a:hover {} 選中當滑鼠停留在上方時的<a>
+--------------------
+偽元素選擇器 (元素的一部分)
+元素::偽元素 {}
+例如 p::first-line {} 選中<p>的第一行
+--------------------
+偽元素表：
+::first-line 第一行
+::first-letter 第一個字
+::selection 被選取的部分
+*/
+/*特定 屬性/值 的元素選擇器
+--------------------
+有特定屬性的元素選擇器
+元素[屬性] {}
+例如 a[class] 選中有href屬性的<a>
+--------------------
+只有特定屬性值的元素選擇器 (一個屬性值)
+元素[屬性="值"] {}
+例如 a[class="1"] 選中只有class="1"屬性+值的<a> (<a class="1" href="#">、<a class="1 2">皆不可被選中)
+--------------------
+含有特定屬性值的元素選擇器 (包含此屬性值)
+元素[屬性~="值"] {}
+例如 a[class~="1"] 選中含有class="1"屬性+值的<a> (<a class="1" href="#">、<a class="1 2">皆可被選中)
+--------------------
+含有特定屬性值字串的元素選擇器
+元素[屬性*="值"] {}
+例如 a[class*="614"] 選中<a class="25614443">
+--------------------
+含有特定屬性值字串首的元素選擇器
+元素[屬性^="值"] {}
+例如 a[class^="156"] 選中<a class="15679923">
+--------------------
+含有特定屬性值字串尾的元素選擇器
+元素[屬性$="值"] {}
+例如 a[class$="631"] 選中<a class="21235631">
+--------------------
+?的元素選擇器 (?)
+元素[屬性|="值"] {}
+例如 a[class|="1"] 選中?
+--------------------
+*/
+/*子元素選擇器
+--------------------
+全系子元素選擇器 (所有後代)
+父元素 子元素 {}
+例如 p a {} 選中父元素<p>底下的所有子元素<a> (<a>被選中)
+--------------------
+初代子元素選擇器 (第一代)
+父元素>子元素 {}
+例如 p>a {} 選中父元素<p>底下的初代子元素<a> (<a>被選中)
+--------------------
+*/
+/*兄弟元素選擇器
+--------------------
+相鄰兄弟元素選擇器
+前元素+後元素 {}
+例如 p+a {} 選中緊跟在<p>後的<a>，且父元素必須相同 (<a>被選中)
+--------------------
+通用兄弟元素選擇器
+前元素~後元素 {}
+例如 p~a {} 選中在<p>後的所有<a>，且父元素必須相同 (<a>被選中)
+--------------------
+*/
+
+
+/* 控制屬性繼承
+--------------------
+inherit
+使子元素的屬性值和父元素相同。就是 "開啟繼承"。
+initial
+瀏覽器默認屬性值。如果瀏覽器未定義默認屬性值，且該屬性值是自然繼承的，就設定為 inherit 。
+unset
+重置為自然值，如果屬性是自然繼承，就開啟繼承，否則默認屬性值。
+
+all: unset;
+全屬性值重置。
+*/
+
+/*優先度：
+--------------------
+!important
+最高優先度的值，謹慎使用。
+[元素] {
+    [屬性]: [值] !important;
+}
+--------------------
+優先度計算方式：
+千位： "內聯CSS" (元素內的style屬性) 則该位得一分。这样的声明没有选择器，所以它得分总是1000。
+百位： 选择器中包含"id选择器"则该位得一分。
+十位： 选择器中包含"class选择器"、"属性选择器"或者"伪类选择器"则该位得一分。
+个位： 选择器中包含"元素选择器"、"伪元素选择器"则该位得一分。
+
+千位分數 1
+百位分數 4
+十位分數 6
+個位分數 3
+優先度=1463
+--------------------
+總結：(越後面優先度越大)
+--------------------
+1.用户代理样式表中的声明(例如，浏览器的默认样式，在没有设置其他样式时使用)。
+2.用户样式表中的常规声明(由用户设置的自定义样式)。
+3.作者样式表中的常规声明(这些是我们web开发人员设置的样式)。
+4.作者样式表中的 !important 声明
+5.用户样式表中的 !important 声明
+*/
+
+/*函式
+calc(90%-30px)計算
+rotate(0.8turn)旋轉
+*/
+
+/* margin/padding 語法：
+--------------------
+auto (通常可以視為"平均")
+px (pixel像素)
+em (大小比例)
+--------------------
+1.四周
+    margin: "四周";
+例如
+    margin: 1px;
+--------------------
+2.上下|左右
+    margin: "上下" "左右";
+例如
+    margin: 5% auto;
+--------------------
+3.上|左右|下
+    margin: "上" "左右" "下";
+例如
+    margin: 1em auto 2em;
+--------------------
+4.上|右|下|左
+    margin: "上" "右" "下" "左";
+例如
+    margin: 0 20px 20px 20px;
+--------------------
+*/
+
+/*border
+solid 實心線
+dotted 點線
+double 雙線
+*/
+
+/* li 符號樣式：
+語法：
+li {
+    list-style-type: [example];
+} 
+--------------------
+無序(ul)：
+disc; 黑色填滿圓形
+circle; 黑框空心圓形
+square; 黑色填滿方形
+
+有序(ol)：
+decimal; 阿拉伯數字
+decimal-leading-zero; 阿拉伯數字(前面加零)
+upper-alpha; 英文大寫字母
+lower-alpha; 英文小寫字母
+cjk-decimal; 中日韓文小寫數字
+trad-chinese-formal; 繁體中文大寫數字
+trad-chinese-informal; 繁體中文小寫數字
+simp-chinese-formal; 簡體中文大寫數字
+simp-chinese-informal; 簡體中文小寫數字
+japanese-formal; 日文漢字大寫數字
+japanese-informal; 日文漢字小寫數字
+hiragana; 日文平假名字母
+katakana; 日文片假名字母
+korean-hangul-formal; 韓文小寫數字
+korean-hanja-formal; 韓文漢字大寫數字
+korean-hanja-informal; 韓文漢字小寫數字
+upper-roman; 羅馬大寫數字
+lower-roman; 羅馬小寫數字
+upper-greek; 希臘文大寫字母
+lower-greek; 希臘文小寫字母
+upper-latin; 拉丁文大寫字母
+lower-latin; 拉丁文小寫字母
+hebrew; 希伯來文字母
+*/
+
+/*display可以控制選擇器，是否為塊級元素(block)、內聯元素(inline)或彈性容器(flex)。
+p默認為塊級元素(block)，但可以用：
+
+p {
+    display: inline;
+}
+
+強制改成內聯元素(inline)。
+--------------------
+block
+inline
+flex
+inline-flex
+inline-block
+--------------------
+*/
+
+html {
+    background-color: #00539F;
+    /*background-image: url("images/opengraph-logo.png");*/
+    background-image: linear-gradient(0deg, #FF9500 0%, #007700 50%,  #00539F 100%);
+    /*xdeg=轉x度*/
+
+    font-size: 20px;
+    /*字體大小*/
+    /* px means 'pixels': the base font size is now 10 pixels high  */
+    font-family: 'Noto Serif TC', serif;
+    /*字型*/
+}
+
+body {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    border: 5px solid black;
+    
+    background-color: #FF9500;
+    background-image: url(../images/546902.jpg);
+    background-size: 1200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    background-color: crimson;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+}
+
+nav {
+    width: 100%;
+    background-color: yellow;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 1px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5em;
+    background-color: chartreuse;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+main {
+    width: 50%;
+    height: auto;
+    background-color: lightpink;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+}
+
+aside {
+    width: 24%;
+    background-color: yellowgreen;
+    padding: 0;
+    margin: 0;
+    border: 0.5px solid black;
+}
+
+#left-aside {
+    float: left;
+    border-bottom-left-radius: 10em 10%;
+}
+
+#right-aside {
+    float: right;
+    border-bottom-right-radius: 10em 10%;
+}
+
+.aside-p {
+    font-size: 30px;
+    border-bottom: 1em double rgb(114, 11, 231)
+}
+
+footer {
+    width: 100%;
+    background-color: purple;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: var(--h1_font_size);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+    margin: 0;
+    padding: 20px 0;
+    color: #00539F;
+    text-shadow: 3px 3px 1px black;
+}
+
+h2 {
+    font-size: calc(var(--h1_font_size) - 10px);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+}
+
+h3 {
+    font-size: calc(var(--h1_font_size) - 20px);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+}
+
+h4 {
+    font-size: calc(var(--h1_font_size) - 25px);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+}
+
+h5 {
+    font-size: calc(var(--h1_font_size) - 30px);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+}
+
+h6 {
+    font-size: calc(var(--h1_font_size) - 35px);
+    /*字體大小*/
+    text-align: center;
+    /*位置(置中)*/
+}
+
+p,
+li {
+    font-size: 20px;
+    /*字體大小*/
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+article {
+    width: 100%;
+}
+
+.hide,
+.hide s {
+    color: lightpink;
+}
+
+.hide::selection,
+.hide s::selection {
+    background-color: darkblue;
+}
+
+figure {
+    box-align: center;
+    max-width: 100%;
+}
+
+figcaption {
+    text-align: center;
+    font-weight: bold;
+}
+
+.figcaption-left {
+    text-align: left;
+}
+
+audio {
+    max-width: 100%;
+}
+
+.p_main_js {
+    color: deepskyblue;
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.header-picture {
+    width: 100%
+}
+
+.js-picture {
+    width: 100%;
+}
+
+.dinosaur {
+    max-width: 100%;
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    width: 100%;
+    background-color: white;
+}
+
+svg {
+    max-width: 100%;
+}
+
+a {
+    color: blue;
+    /*超連結文字顏色*/
+}
+
+a:hover,
+a:focus {
+    /*當滑鼠或焦點(鍵盤操作時)停留於超連結上方，變換css*/
+    color: lightblue;
+    /*超連結文字顏色*/
+    font-weight: bold;
+    /*超連結文字粗體*/
+    text-decoration: none;
+    /*移除底線*/
+}
+
+a:visited {
+    /*已訪問*/
+    color: darkblue;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+}
+
+th {
+    background-color: rgb(235, 235, 235);
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) td {
+    background-color: rgb(250, 250, 250);
+}
+
+tr:nth-child(odd) td {
+    background-color: rgb(245, 245, 245);
+}
+
+caption {
+    padding: 10px;
+}
+
+tbody {
+    font-size: 90%;
+    font-style: italic;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+.border-vs {
+    margin: 2px;
+    padding: 2px;
+    border: 2px solid black;
+}
+
+.border-vs.block {
+    display: block;
+}
+
+.border-vs.inline {
+    display: inline;
+}
+
+.border-vs.flex {
+    display: flex;
+}
+
+.border-vs.inline-block {
+    display: inline-block;
+}
+
+.border-vs.inline-flex {
+    display: inline-flex;
+}
